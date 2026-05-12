@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PomoFocus | Fun Study Timer</title>
+    <meta name="description" content="A colorful and fun Pomodoro timer to boost your productivity. Customize focus and rest times, and stay motivated with a vibrant interface.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="app-container">
+        <header>
+            <h1 id="app-title">PomoFocus</h1>
+            <p id="app-subtitle">Level up your study sessions</p>
+        </header>
+
+        <section class="timer-card" id="timer-card">
+            <div class="timer-display">
+                <span id="minutes">25</span>:<span id="seconds">00</span>
+            </div>
+            
+            <div class="timer-status" id="timer-status">Ready to Focus?</div>
+
+            <div class="timer-controls">
+                <button id="start-btn" class="btn primary-btn">Start Session</button>
+                <button id="cancel-btn" class="btn secondary-btn hidden">Cancel</button>
+            </div>
+        </section>
+
+        <section class="settings-card">
+            <div class="setting-group">
+                <label for="focus-time">Focus Time (min)</label>
+                <div class="range-container">
+                    <input type="range" id="focus-time" min="1" max="60" value="25">
+                    <span id="focus-val" class="val-display">25</span>
+                </div>
+            </div>
+
+            <div class="setting-group">
+                <label for="rest-time">Rest Time (min)</label>
+                <div class="range-container">
+                    <input type="range" id="rest-time" min="5" max="30" value="5">
+                    <span id="rest-val" class="val-display">5</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
